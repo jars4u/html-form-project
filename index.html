@@ -14,40 +14,127 @@
 <body>
     <div class="container-fluid">
         <div>
+            <!--Titulo-->
             <div>
                 <h1>Payment for example</h1>
             </div>
-            <div>
-                <div id=missfield class="col-12 p-2"><strong>Some fields are missing</strong></div>
-                <div class="d-flex">
-                    <div class="col-5 p-1">
-                        <label for="number" class="form-label">Card #</label>
-                        <div class="input-group">
-                            <input placeholder="XXXXXXXXX" type="text" class="form-control" id="number"
-                                aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
-                    <div class="col-3 p-1">
-                        <label for="number" class="form-label">CVC #</label>
-                        <div class="input-group">
-                            <input placeholder="0000" type="text" class="form-control" id="number"
-                                aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <label for="number" class="form-label">Amount</label>
-                        <div class="input-group">
-                            <input placeholder="$ Amount" type="text" class="form-control" id="number"
-                                aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
+            <!--end Titulo-->
 
+            <!--Fields Missing-->
+            <div id=missfield class="col-12 p-2"><strong>Some fields are missing</strong></div>
+            <!--end Fields Missing-->
 
-
-                    <!-- <fieldset class="p-1">Card #<br><input placeholder="XXXXXXXXXXXXX" type="text"></fieldset>
-                    <fieldset class="p-1">CVC #<br><input placeholder="0000" type="text"></fieldset>
-                    <fieldset class="p-1">Amount<br>$ <input placeholder="Amount" type="text"></fieldset> -->
+            <!--Card data-->
+            <div class="d-flex">
+                <div class="col-5 p-1">
+                    <label for="number" class="form-label">Card #</label>
+                    <div class="input-group">
+                        <input placeholder="XXXXXXXXX" type="text" class="form-control" id="number"
+                            aria-describedby="basic-addon3 basic-addon4">
+                    </div>
                 </div>
+                <div class="col-3 p-1">
+                    <label for="number" class="form-label">CVC #</label>
+                    <div class="input-group">
+                        <input placeholder="0000" maxlength="4" type="text" class="form-control" id="number"
+                            aria-describedby="basic-addon3 basic-addon4">
+                    </div>
+                </div>
+                <div class="col-4 p-1">
+                    <label for="number" class="form-label">Amount</label>
+                    <div class="input-group align-items-center">$&nbsp
+                        <input placeholder="Amount" type="text" class="form-control" id="number"
+                            aria-describedby="basic-addon3 basic-addon4">
+                    </div>
+                </div>
+            </div>
+            <!--end Card Data-->
+
+            <!--Personal data and Payment-->
+            <div class="d-flex">
+                <!--Left side-->
+                <div class="col-6 p-1">
+                    <fieldset>
+                        <div>
+                            <label for="name" class="form-label">First Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="name"
+                                    aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div>
+                            <label for="city" class="form-label">City</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="city"
+                                    aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>We accept:
+                        <ul class="d-flex align-items-center p-0" style="list-style: none">
+                            <li class="p-1"><label><input checked type="radio" name="card"><img class="p-1"
+                                    src="https://static-00.iconduck.com/assets.00/mastercard-icon-512x329-xpgofnyv.png"
+                                    alt="mastercard"></label></li>
+                            <li class="p-1"><label><input type="radio" name="card"><img class="p-1"
+                                    src="https://img.icons8.com/color/512/visa.png" alt="visa"></label></li>
+                            <li class="p-1"><label><input type="radio" name="card"><img class="p-1"
+                                    src="https://www.svgrepo.com/show/328150/diners.svg"
+                                    alt="dinners"></label></li>
+                            <li class="p-1"><label><input type="radio" name="card"><img class="p-1"
+                                    src="https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/business-green-rewards.png" alt="american"></label></li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <!--end Left Side-->
+
+                <!--Right Side-->
+                <div class="col-6 p-1">
+                    <fieldset>
+                        <div>
+                            <label for="lname" class="form-label">Last Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="lname"
+                                    aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="d-flex">
+                        <fieldset class="col-6">
+                            <label for="state" class="form-label">State</label><br>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Pick a state</option>
+                                <option value="1">Aragua</option>
+                                <option value="2">Bolivar</option>
+                                <option value="3">Carabobo</option>
+                                <option value="4">Zulia</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="col-6">
+                            <label for="pcode" class="form-label">&nbsp Postal Code</label>
+                            <div class="input-group ms-2">
+                                <input type="number" class="form-control" id="pcode"
+                                    aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </fieldset>
+                    </div>
+                    <fieldset>Message:
+                        <div class="form-floating">
+                            <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2"></label>
+                            <p class="text-secondary fs-6 fw-light">Add any notes here.</p>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <!--end Right Side-->
+            <!--end Personal Data and Payment-->
+
+            <!--buttons-->
+            <div class="d-flex justify-content-end">
+                <button type="button" class="m-1 btn btn-secondary">Cancel</button>
+                <button type="button" class="m-1 btn btn-primary">Send</button>
             </div>
         </div>
     </div>
